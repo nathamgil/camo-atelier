@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sob medida — CAMÔ</title>
+<meta name="description" content="Peça uma peça de macramê criada para você: conte a ideia, anexe referências e receba o orçamento.">
+<meta property="og:image" content="fotos/03.jpg">
+<meta name="theme-color" content="#F3EDE2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Syne:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/camo.css">
+</head>
+<body data-pg="medida">
+<main>
+<div class="wrap pcab"><p class="mono migalha"><a href="index.html">início</a> / sob medida</p><h1>sob <i>medida</i></h1><p class="lead">Uma peça pensada com você: para um palco, um ensaio, uma formatura, um casamento na areia.</p></div>
+<div class="wrap"><ol class="passos">
+  <li><h3>Conversa</h3><p>Você conta a ocasião, manda referências e diz o que quer sentir ao vestir.</p></li>
+  <li><h3>Desenho</h3><p>Croqui, escolha de fio, cor e miçangas. Orçamento e prazo fechados.</p></li>
+  <li><h3>Tecer</h3><p>A peça é atada à mão no ateliê. Você acompanha o processo por fotos.</p></li>
+  <li><h3>Prova</h3><p>Ajuste no corpo, entrega em mãos ou envio para todo o Brasil.</p></li>
+</ol></div>
+<section><div class="wrap duo">
+  <div class="prosa"><div class="arte" style="aspect-ratio:4/5;overflow:hidden;border:1px solid var(--tinta);margin-bottom:24px"><img src="fotos/11.jpg" alt="Vestido de macramê preto com mangas avulsas" loading="lazy" style="object-position:50% 30%"></div>
+    <p><strong>Prazo:</strong> de 15 a 30 dias, conforme a complexidade.</p>
+    <p><strong>Pagamento:</strong> 50% de sinal para reservar a agenda e comprar o fio; o restante na entrega.</p>
+    <p><strong>Referências:</strong> vale foto de peça, de cor, de tecido, de pose. Até 4 imagens.</p></div>
+  <form class="caixa" id="formMedida">
+    <h2>Conta o que você imagina.</h2>
+    <fieldset><legend>Você</legend><div class="grupo" style="margin:0">
+      <label><span class="mono">seu nome</span><input name="nome" required autocomplete="name"></label>
+      <label><span class="mono">tipo de peça</span><select name="peca"><option>Vestido</option><option>Top</option><option>Saia</option><option>Conjunto</option><option>Acessório</option><option>Figurino</option></select></label>
+      <label><span class="mono">ocasião</span><input name="ocasiao" placeholder="ensaio, show, festa…"></label>
+      <label><span class="mono">para quando</span><input name="data" type="date"></label>
+      <label class="t"><span class="mono">quanto pensa em investir</span><select name="faixa"><option>ainda não sei</option><option>até R$ 500</option><option>R$ 500 a R$ 1.000</option><option>R$ 1.000 a R$ 2.000</option><option>acima de R$ 2.000</option></select></label>
+    </div></fieldset>
+    <fieldset><legend>Medidas <span class="mono cinza">(opcional, em cm)</span></legend><div class="grupo medidas" style="margin:0">
+      <label><span class="mono">busto</span><input name="busto" inputmode="numeric"></label><label><span class="mono">cintura</span><input name="cintura" inputmode="numeric"></label><label><span class="mono">quadril</span><input name="quadril" inputmode="numeric"></label><label><span class="mono">altura</span><input name="altura" inputmode="numeric"></label>
+    </div></fieldset>
+    <fieldset><legend>A ideia</legend>
+      <label><span class="mono">ideia, cores, o que você quer sentir</span><textarea name="ideia" required></textarea></label>
+      <label class="solta" id="solta" style="margin-top:14px"><input type="file" id="fotos" accept="image/*" multiple><strong>Anexar fotos de referência</strong><span class="mono cinza">toque para escolher ou arraste aqui · até 4 imagens</span></label>
+      <div class="anexos" id="anexos"></div>
+    </fieldset>
+    <button class="btn cheio larga">enviar para o ateliê</button>
+    <p class="status mono" id="stMedida" aria-live="polite"></p>
+  </form>
+</div></section>
+</main>
+<script src="js/camo.js"></script>
+</body>
+</html>

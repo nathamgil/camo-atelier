@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acervo — CAMÔ</title>
+<meta name="description" content="Peças de macramê prontas no ateliê e modelos tecidos sob demanda.">
+<meta property="og:image" content="fotos/03.jpg">
+<meta name="theme-color" content="#F3EDE2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Syne:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/camo.css">
+</head>
+<body data-pg="acervo">
+<main>
+<div class="wrap pcab"><p class="mono migalha"><a href="index.html">início</a> / acervo</p><h1>o <i>acervo</i></h1><p class="lead">Peças prontas no ateliê e modelos que podem ser tecidos de novo sob demanda, na sua medida.</p></div>
+<div class="wrap" style="padding-bottom:clamp(64px,9vw,130px)">
+  <div class="barra"><div class="filtros mono" id="filtros" role="group" aria-label="filtrar peças"></div>
+  <label style="grid-auto-flow:column;align-items:center;gap:12px"><span class="mono" id="conta" aria-live="polite"></span><select id="ordem" aria-label="ordenar" style="width:auto;padding:9px 12px"><option value="">ordem do ateliê</option><option value="menor">menor preço</option><option value="maior">maior preço</option></select></label></div>
+  <div class="grade" id="grade"></div>
+</div>
+</main>
+<script src="js/camo.js"></script>
+</body>
+</html>

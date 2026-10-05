@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sacola — CAMÔ</title>
+<meta name="description" content="Feche seu pedido com o ateliê.">
+<meta property="og:image" content="fotos/03.jpg">
+<meta name="theme-color" content="#F3EDE2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Syne:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/camo.css">
+</head>
+<body data-pg="sacola">
+<main>
+<div class="wrap pcab"><p class="mono migalha"><a href="acervo.html">acervo</a> / sacola</p><h1>sua <i>sacola</i></h1></div>
+<div class="wrap" style="padding-bottom:clamp(64px,9vw,130px)">
+  <div id="vazia" hidden><p class="lead cinza" style="margin-bottom:24px">Sua sacola está vazia.</p><a class="btn cheio" href="acervo.html">ir para o acervo</a></div>
+  <form id="formPedido" class="duo pedido"><div id="cheia">
+    <fieldset><legend>1 · Seus dados</legend><div class="grupo" style="margin:0">
+      <label><span class="mono">nome</span><input name="nome" required autocomplete="name"></label>
+      <label><span class="mono">whatsapp</span><input name="fone" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000"></label></div></fieldset>
+    <fieldset><legend>2 · Entrega</legend><div class="opcs">
+      <label class="opc"><input type="radio" name="entrega" value="envio" checked><span>Envio para todo o Brasil<small>postagem em até 3 dias úteis após a peça ficar pronta</small></span><span class="mono">R$ 28</span></label>
+      <label class="opc"><input type="radio" name="entrega" value="retirada"><span>Retirar no ateliê<small>com hora marcada</small></span><span class="mono">grátis</span></label></div>
+      <div class="grupo" id="endereco" style="margin:14px 0 0"><label><span class="mono">cep</span><input name="cep" inputmode="numeric" autocomplete="postal-code"></label><label><span class="mono">cidade / uf</span><input name="cidade" autocomplete="address-level2"></label><label class="t"><span class="mono">rua, número, complemento</span><input name="rua" autocomplete="street-address"></label></div></fieldset>
+    <fieldset><legend>3 · Pagamento</legend><div class="opcs">
+      <label class="opc"><input type="radio" name="pag" value="pix" checked><span>Pix<small>chave enviada na confirmação do pedido</small></span><span class="mono">5% off</span></label>
+      <label class="opc"><input type="radio" name="pag" value="cartao"><span>Cartão de crédito<small>link de pagamento seguro enviado pelo ateliê</small></span><span class="mono">até 3x</span></label>
+      <label class="opc" id="opSinal"><input type="radio" name="pag" value="sinal"><span>Sinal + restante na entrega<small>para peças sob demanda: metade agora, metade quando ficar pronta</small></span><span class="mono">50%</span></label></div></fieldset>
+    <fieldset><legend>4 · Algum recado?</legend><textarea name="obs" aria-label="recado para o ateliê" placeholder="é presente, tem data, quer ajuste…"></textarea></fieldset>
+  </div>
+  <aside class="caixa resumo" id="resumo"><h2>Resumo</h2><div id="itens"></div>
+    <div class="cupom"><input id="cupom" placeholder="cupom" aria-label="cupom de desconto"><button type="button" class="mono" id="aplica">aplicar</button></div><p class="mono cinza" id="stCupom" aria-live="polite"></p>
+    <div id="contas" style="margin:10px 0 20px"></div>
+    <button class="btn cheio larga">enviar pedido ao ateliê</button>
+    <p class="status mono" id="stPedido" aria-live="polite">nenhum pagamento é feito nesta página. O ateliê confirma a peça e envia o Pix ou o link do cartão.</p></aside></form>
+</div>
+</main>
+<script src="js/camo.js"></script>
+</body>
+</html>
